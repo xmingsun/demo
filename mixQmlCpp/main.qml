@@ -2,6 +2,8 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 
+import an.qt.ColorMaker 1.0
+
 Window
 {
     visible: true
@@ -23,9 +25,16 @@ Window
             border.color:(control.hovered||control.pressed)?"blue":"green"
         }
 
+        ColorMaker {
+                id: colorMaker;
+                color: Qt.green;
+            }
+
+
         onClicked:
         {
             console.log("Cancel Button clicked....")
+            colorMaker.start();
         }
     }
 
