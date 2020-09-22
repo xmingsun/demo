@@ -40,4 +40,16 @@ Window
 
 
 
+    Button {
+           id: colorAlgorithm;
+           text: "RandomRGB";
+           anchors.left: stop.right;
+           anchors.leftMargin: 4;
+           anchors.bottom: start.bottom;
+           onClicked: {
+               colorMaker.algorithm();
+           }
+       }
+
+
 }
